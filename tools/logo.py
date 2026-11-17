@@ -108,7 +108,8 @@ def extras():
     l = logo.copy()
     l.thumbnail((1150, int(630 * .96)), Image.LANCZOS)
     og.alpha_composite(l, ((1200 - l.width) // 2, (630 - l.height) // 2))
-    og.convert("RGB").save(RAIZ / "og.png", optimize=True)
+    # paleta de 256 cores: WhatsApp ignora og:image acima de ~300KB
+    og.convert("RGB").quantize(256, dither=Image.Dither.NONE).save(RAIZ / "og.png", optimize=True)
     print("favicon", quad.size, "og", og.size, (RAIZ / "og.png").stat().st_size // 1024, "KB")
 
 
