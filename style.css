@@ -1,0 +1,218 @@
+/* Paleta amostrada da logo; azul e verde escurecidos onde há texto, para contraste AA */
+:root {
+  --rosa: #fdb1e5;        /* raios do fundo da logo */
+  --rosa-raio: #ffc6ec;
+  --rosa-claro: #ffe3f4;
+  --rosa-forte: #ef5fa7;  /* pirulitos */
+  --azul-logo: #2296f2;   /* prancha (decoração) */
+  --azul: #1167b8;        /* botões e títulos: 5.7:1 com branco */
+  --azul-escuro: #0b3a66; /* texto: 9.7:1 sobre rosa-claro */
+  --amarelo: #f9c80e;
+  --verde: #3d7a5a;
+  --verde-claro: #8cc5a3;
+  --laranja: #f39c2b;
+  --branco: #fff;
+  --raio: 24px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+body {
+  margin: 0;
+  background: var(--rosa-claro);
+  color: var(--azul-escuro);
+  font: 400 1rem/1.6 "Nunito", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+h1, h2, h3, p { margin: 0; }
+a { color: var(--azul); }
+:focus-visible { outline: 3px solid var(--azul-escuro); outline-offset: 3px; border-radius: 4px; }
+
+/* ---------- topo ---------- */
+.hero {
+  min-height: 92svh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 1.25rem;
+  padding: 2rem 16px 3.5rem;
+  text-align: center;
+  background: repeating-conic-gradient(from 0deg at 50% 40%, var(--rosa) 0 7.5deg, var(--rosa-raio) 7.5deg 15deg);
+  border-radius: 0 0 50% 50% / 0 0 32px 32px;
+}
+.hero__logo {
+  width: min(92vw, 560px);
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgb(176 60 130 / .25));
+}
+.hero__frase {
+  max-width: 22ch;
+  font-weight: 800;
+  font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+  line-height: 1.3;
+  color: var(--azul-escuro);
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: .75rem 1.75rem;
+  border-radius: 999px;
+  background: var(--azul);
+  color: var(--branco);
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 6px 0 var(--azul-escuro);
+}
+.botao:hover { background: var(--azul-escuro); }
+.botao:active { transform: translateY(3px); box-shadow: 0 3px 0 var(--azul-escuro); }
+.botao--contorno {
+  background: var(--branco);
+  color: var(--azul);
+  border: 2px solid var(--azul);
+  box-shadow: 0 4px 0 var(--azul);
+}
+.botao--contorno:hover { background: var(--rosa-claro); }
+
+/* ---------- seções ---------- */
+.secao {
+  position: relative;
+  padding: 4rem 16px;
+  text-align: center;
+  isolation: isolate;
+  overflow-x: clip; /* folhas decorativas vazam da borda de propósito */
+}
+.secao--clara { background: var(--branco); }
+.titulo {
+  font: 400 clamp(2rem, 7vw, 2.75rem)/1.2 "Pacifico", cursive;
+  color: var(--azul);
+  margin-bottom: .75rem;
+}
+.titulo::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 6px;
+  margin: .5rem auto 0;
+  border-radius: 3px;
+  background: var(--amarelo);
+}
+.secao__intro { margin-bottom: 2rem; font-size: 1.1rem; }
+
+/* folhas decorativas nas bordas */
+.folhas {
+  position: absolute;
+  z-index: -1;
+  width: 90px;
+  height: 144px;
+  top: 1.5rem;
+  color: var(--verde-claro);
+  opacity: .7;
+}
+.folhas--esq { left: -24px; transform: rotate(-28deg); }
+.folhas--dir { right: -24px; transform: rotate(28deg); color: var(--verde); opacity: .35; }
+
+/* ---------- produtos ---------- */
+.cards {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 960px; /* 3 colunas no desktop: 6 cards fecham 2 linhas */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto; /* selo sempre no pé do card */
+  justify-items: center;
+  gap: .5rem;
+  padding: 1.5rem 1.25rem 1.75rem;
+  background: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: 0 10px 24px rgb(239 95 167 / .18);
+}
+.card__arte { width: 120px; height: 120px; margin-bottom: .25rem; }
+.card h3 { font-size: 1.25rem; font-weight: 800; color: var(--azul); }
+.card p { max-width: 28ch; }
+.selo {
+  align-self: end;
+  margin-top: .5rem;
+  padding: .25rem .9rem;
+  border-radius: 999px;
+  background: var(--amarelo);
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+/* ---------- sobre ---------- */
+.sobre {
+  max-width: 60ch;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- contato ---------- */
+.contato {
+  max-width: 520px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+}
+.contato__item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  text-align: left;
+}
+.contato__item svg { flex: none; width: 28px; height: 28px; color: var(--rosa-forte); }
+.contato__item a { display: inline-block; padding: .6rem 0; font-weight: 700; }
+address { font-style: normal; }
+
+/* ---------- rodapé ---------- */
+.rodape {
+  padding: 2rem 16px;
+  padding-bottom: calc(96px + env(safe-area-inset-bottom)); /* espaço para o botão do WhatsApp não cobrir o crédito */
+  text-align: center;
+  background: var(--azul-escuro);
+  color: var(--rosa-claro);
+  font-size: .875rem;
+}
+.rodape__credito { margin-top: .25rem; opacity: .9; }
+.rodape a { display: inline-block; padding: .5rem 0; color: var(--amarelo); }
+/* rodapé é azul-escuro: o contorno padrão some */
+.rodape :focus-visible { outline-color: var(--amarelo); }
+
+/* ---------- WhatsApp fixo ---------- */
+.whatsapp {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #1fa855; /* verde WhatsApp escurecido: ícone branco 3.1:1 */
+  color: var(--branco);
+  box-shadow: 0 6px 16px rgb(0 0 0 / .25);
+}
+.whatsapp svg { width: 34px; height: 34px; }
+.whatsapp:hover { background: #178a45; }
+/* anel duplo: visível sobre o rosa e sobre o rodapé azul-escuro */
+.whatsapp:focus-visible { outline: 3px solid var(--azul-escuro); outline-offset: 2px; box-shadow: 0 0 0 8px var(--amarelo); border-radius: 50%; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

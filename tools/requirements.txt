@@ -1,0 +1,3 @@
+vtracer
+rembg[cpu]
+pillow

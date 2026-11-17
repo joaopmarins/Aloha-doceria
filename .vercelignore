@@ -1,0 +1,6 @@
+# allowlist: só o site vai para a Vercel (tools/ tem venv e binários, .impeccable/ tem caminhos locais)
+/*
+!index.html
+!style.css
+!og.png
+!assets

@@ -1,0 +1,15 @@
+# ferramentas pesadas e regeneráveis (tools/logo.py recria tudo)
+tools/.venv/
+tools/bin/
+tools/out/
+__pycache__/
+
+# caches locais (têm caminhos da máquina)
+.impeccable/
+.vercel/
+
+# relatório gerado
+docs/lighthouse.json
+
+# documentação interna (design, plano, ledger) fica só local
+*.md

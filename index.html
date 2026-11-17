@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Aloha Doces e Festas</title>
+  <meta name="description" content="Bolos, docinhos e kits festa feitos com carinho em Sumaré-SP. Encomende pelo WhatsApp.">
+  <meta name="theme-color" content="#fdb1e5">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aloha Doces e Festas">
+  <meta property="og:description" content="Bolos, docinhos e kits festa feitos com carinho em Sumaré-SP. Encomende pelo WhatsApp.">
+  <!-- trocar o domínio se a Vercel gerar outro -->
+  <meta property="og:url" content="https://aloha-doces.vercel.app/">
+  <meta property="og:image" content="https://aloha-doces.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Pacifico&display=swap">
+  <link rel="preload" as="image" imagesrcset="assets/logo-800.webp 800w, assets/logo.webp 1600w" imagesizes="min(92vw, 560px)" type="image/webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- folha decorativa reutilizada com <use> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="folha" viewBox="0 0 100 160">
+      <path d="M50 158C20 130 2 95 6 60 10 28 30 8 50 2c20 6 40 26 44 58 4 35-14 70-44 98Z" fill="currentColor"/>
+      <path d="M50 150V12M50 40 28 26M50 40l22-14M50 70 22 52M50 70l28-18M50 100 24 84M50 100l26-16" stroke="#fff" stroke-opacity=".45" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header id="topo" class="hero">
+    <picture>
+      <source srcset="assets/logo-800.webp 800w, assets/logo.webp 1600w" sizes="min(92vw, 560px)" type="image/webp">
+      <img class="hero__logo" src="assets/logo.png" width="800" height="670"
+           alt="Aloha Doces e Festas: logo com pirulitos coloridos, prancha de surfe azul e folhas tropicais">
+    </picture>
+    <p class="hero__frase">Doces que deixam sua festa com gostinho de férias</p>
+    <a class="botao" href="#produtos">Ver nossos doces</a>
+  </header>
+
+  <main>
+    <section id="produtos" class="secao" aria-labelledby="produtos-titulo">
+      <svg class="folhas folhas--esq" aria-hidden="true" focusable="false"><use href="#folha"/></svg>
+      <h2 id="produtos-titulo" class="titulo">Nossas delícias</h2>
+      <p class="secao__intro">Tudo feito sob encomenda, do jeitinho da sua festa.</p>
+      <!-- PLACEHOLDER --> <!-- produtos de exemplo: trocar pelos reais -->
+      <ul class="cards" role="list">
+        <li class="card">
+          <svg class="card__arte" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="56" fill="var(--rosa-claro)"/>
+            <rect x="26" y="62" width="68" height="30" rx="6" fill="var(--rosa-forte)"/>
+            <rect x="34" y="40" width="52" height="26" rx="6" fill="#fff"/>
+            <path d="M26 72c8 6 14-6 22 0s14-6 22 0 14-6 24 0" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M34 48c6 5 11-5 17 0s11-5 17 0 11-5 18 0" stroke="var(--rosa-forte)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <rect x="57" y="22" width="6" height="18" rx="2" fill="var(--azul-logo)"/>
+            <path d="M60 10c5 6 5 10 0 12-5-2-5-6 0-12Z" fill="var(--amarelo)"/>
+          </svg>
+          <h3>Bolos personalizados</h3>
+          <p>Recheios caprichados e decoração com o tema da sua festa.</p>
+          <span class="selo">sob consulta</span>
+        </li>
+        <li class="card">
+          <svg class="card__arte" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="56" fill="#fff4cc"/>
+            <g fill="var(--rosa-forte)"><path d="M18 74h28l-4 18H22Z"/><path d="M46 60h28l-4 18H50Z"/><path d="M74 74h28l-4 18H78Z"/></g>
+            <g fill="#5b3a29"><circle cx="32" cy="68" r="12"/><circle cx="60" cy="54" r="12"/><circle cx="88" cy="68" r="12"/></g>
+            <g fill="var(--amarelo)"><circle cx="28" cy="64" r="1.8"/><circle cx="35" cy="62" r="1.8"/><circle cx="56" cy="49" r="1.8"/><circle cx="63" cy="48" r="1.8"/><circle cx="85" cy="63" r="1.8"/><circle cx="92" cy="65" r="1.8"/></g>
+          </svg>
+          <h3>Docinhos de festa</h3>
+          <p>Brigadeiros, beijinhos e casadinhos para encher a mesa.</p>
+          <span class="selo">sob consulta</span>
+        </li>
+        <li class="card">
+          <svg class="card__arte" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="56" fill="#dff0ff"/>
+            <rect x="36" y="22" width="48" height="12" rx="4" fill="var(--azul-logo)"/>
+            <path d="M38 36h44v52a8 8 0 0 1-8 8H46a8 8 0 0 1-8-8Z" fill="#fff" stroke="var(--azul-logo)" stroke-width="3"/>
+            <rect x="41" y="74" width="38" height="18" rx="4" fill="#5b3a29"/>
+            <rect x="41" y="62" width="38" height="12" fill="#fff4cc"/>
+            <rect x="41" y="50" width="38" height="12" fill="var(--rosa-forte)"/>
+            <path d="M41 50c6-6 12 2 19-4s13 2 19-2" stroke="#fff" stroke-width="3" fill="none"/>
+          </svg>
+          <h3>Bolo no pote</h3>
+          <p>Camadas de bolo e creme para comer de colher.</p>
+          <span class="selo">sob consulta</span>
+        </li>
+        <li class="card">
+          <svg class="card__arte" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="56" fill="var(--rosa-claro)"/>
+            <path d="M34 66h52l-8 30H42Z" fill="var(--azul-logo)"/>
+            <path d="M44 66l3 30M60 66v30M76 66l-3 30" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
+            <path d="M30 66c-4-14 8-20 14-18 0-12 12-18 20-12 8-8 22-2 22 10 8 0 12 10 6 20Z" fill="#fff"/>
+            <circle cx="62" cy="30" r="7" fill="var(--rosa-forte)"/>
+          </svg>
+          <h3>Cupcakes</h3>
+          <p>Fofinhos, coloridos e com cobertura generosa.</p>
+          <span class="selo">sob consulta</span>
+        </li>
+        <li class="card">
+          <svg class="card__arte" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="56" fill="#fff4cc"/>
+            <path d="M60 30l7 8 10-3 1 10 10 4-5 9 5 9-10 4-1 10-10-3-7 8-7-8-10 3-1-10-10-4 5-9-5-9 10-4 1-10 10 3Z" fill="#fff" stroke="var(--rosa-forte)" stroke-width="2"/>
+            <circle cx="60" cy="66" r="18" fill="#5b3a29"/>
+            <path d="M45 62l5-5 5 5 5-5 5 5 5-5 5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M47 72l5-4 5 4 5-4 5 4 5-4 5 4" stroke="var(--amarelo)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Doces finos</h3>
+          <p>Bombons e trufas para casamentos e ocasiões especiais.</p>
+          <span class="selo">sob consulta</span>
+        </li>
+        <li class="card">
+          <svg class="card__arte" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="56" fill="#dff0ff"/>
+            <ellipse cx="38" cy="38" rx="12" ry="15" fill="var(--rosa-forte)"/>
+            <ellipse cx="82" cy="34" rx="12" ry="15" fill="var(--amarelo)"/>
+            <path d="M38 53c2 10-4 14 0 24M82 49c-2 10 4 16 0 28" stroke="var(--azul-escuro)" stroke-width="2" fill="none"/>
+            <rect x="40" y="70" width="40" height="28" rx="4" fill="var(--azul-logo)"/>
+            <rect x="36" y="62" width="48" height="10" rx="3" fill="var(--azul)"/>
+            <rect x="57" y="62" width="6" height="36" fill="var(--amarelo)"/>
+            <path d="M60 62c-10-10-18-2-10 2M60 62c10-10 18-2 10 2" stroke="var(--amarelo)" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </svg>
+          <h3>Kit festa</h3>
+          <p>Bolo e docinhos combinados para a sua comemoração.</p>
+          <span class="selo">sob consulta</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="sobre" class="secao secao--clara" aria-labelledby="sobre-titulo">
+      <svg class="folhas folhas--dir" aria-hidden="true" focusable="false"><use href="#folha"/></svg>
+      <h2 id="sobre-titulo" class="titulo">Sobre a Aloha</h2>
+      <!-- PLACEHOLDER --> <!-- texto de exemplo: trocar pela história real da loja -->
+      <div class="sobre">
+        <p>A Aloha nasceu da vontade de transformar cada comemoração num momento leve e alegre, com aquele clima de férias que a gente adora.</p>
+        <p>Cada doce é preparado com ingredientes selecionados e muito carinho, pensado nos detalhes para deixar a sua mesa linda e o seu dia ainda mais doce.</p>
+      </div>
+    </section>
+
+    <section id="contato" class="secao" aria-labelledby="contato-titulo">
+      <h2 id="contato-titulo" class="titulo">Venha nos visitar</h2>
+      <div class="contato">
+        <div class="contato__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" fill="currentColor"/></svg>
+          <address>Av. Emílio Bôsco, 990 - Jardim Morumbi (Nova Veneza)<br>Sumaré - SP, 13180-000</address>
+        </div>
+        <a class="botao botao--contorno" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Em%C3%ADlio%20B%C3%B4sco%2C%20990%20-%20Jardim%20Morumbi%20(Nova%20Veneza)%2C%20Sumar%C3%A9%20-%20SP%2C%2013180-000" target="_blank" rel="noopener">Ver no mapa</a>
+        <!-- PLACEHOLDER --> <!-- horário de exemplo -->
+        <div class="contato__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.4 3.3 3.3-1.4 1.4L11 13.2V6h2Z" fill="currentColor"/></svg>
+          <p>Seg a Sáb, 9h às 18h</p>
+        </div>
+        <!-- PLACEHOLDER --> <!-- Instagram de exemplo: confirmar o @ real -->
+        <div class="contato__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM17.3 5.4a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z" fill="currentColor"/></svg>
+          <a href="https://instagram.com/alohadocesefestas" target="_blank" rel="noopener">@alohadocesefestas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2026 Aloha Doces e Festas</p>
+    <p class="rodape__credito">Feito por João Marins · <a href="mailto:joaopfmarins@gmail.com">joaopfmarins@gmail.com</a></p>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/5519996492363?text=Ol%C3%A1!%20Vim%20pelo%20site" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.7c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4Z"/></svg>
+  </a>
+</body>
+</html>
